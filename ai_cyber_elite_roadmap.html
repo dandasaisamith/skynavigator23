@@ -1,0 +1,1487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI + Cybersecurity Elite Roadmap — ₹60 LPA & Beyond</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #050810;
+  --surface: #0c1020;
+  --surface2: #111827;
+  --border: rgba(255,255,255,0.07);
+  --border2: rgba(255,255,255,0.12);
+  --text: #e8eaf0;
+  --text2: #8b92a8;
+  --text3: #4a5168;
+  --cyan: #00d4ff;
+  --green: #00ff88;
+  --orange: #ff6b35;
+  --purple: #a855f7;
+  --red: #ff3d5a;
+  --gold: #ffd700;
+  --blue: #3b82f6;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Inter',sans-serif;
+  font-size:14px;
+  line-height:1.6;
+  overflow-x:hidden;
+}
+
+/* NOISE OVERLAY */
+body::before{
+  content:'';
+  position:fixed;
+  inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events:none;
+  z-index:0;
+  opacity:.4;
+}
+
+/* GRID BG */
+body::after{
+  content:'';
+  position:fixed;
+  inset:0;
+  background-image:
+    linear-gradient(rgba(0,212,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,212,255,0.02) 1px, transparent 1px);
+  background-size:60px 60px;
+  pointer-events:none;
+  z-index:0;
+}
+
+.wrap{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:0 24px 80px;}
+
+/* ── HERO ── */
+.hero{
+  padding:80px 0 60px;
+  text-align:center;
+  position:relative;
+}
+.hero-glow{
+  position:absolute;
+  top:0;left:50%;transform:translateX(-50%);
+  width:600px;height:300px;
+  background:radial-gradient(ellipse, rgba(0,212,255,0.12) 0%, transparent 70%);
+  pointer-events:none;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:6px;
+  border:1px solid rgba(0,212,255,0.3);
+  background:rgba(0,212,255,0.05);
+  padding:4px 14px;border-radius:999px;
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;color:var(--cyan);
+  letter-spacing:.08em;margin-bottom:24px;
+  animation:fadeDown .6s ease both;
+}
+.hero h1{
+  font-family:'Syne',sans-serif;
+  font-size:clamp(36px,6vw,72px);
+  font-weight:800;
+  line-height:1.05;
+  letter-spacing:-1px;
+  animation:fadeDown .7s .1s ease both;
+}
+.hero h1 span{
+  background:linear-gradient(135deg,var(--cyan),var(--green));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+}
+.hero-sub{
+  font-size:16px;color:var(--text2);max-width:600px;margin:16px auto 0;
+  animation:fadeDown .7s .2s ease both;
+}
+.hero-stats{
+  display:flex;justify-content:center;gap:40px;margin-top:40px;flex-wrap:wrap;
+  animation:fadeDown .7s .3s ease both;
+}
+.stat{text-align:center}
+.stat-n{font-family:'Syne',sans-serif;font-size:28px;font-weight:800;color:var(--cyan)}
+.stat-l{font-size:11px;color:var(--text3);letter-spacing:.06em;margin-top:2px}
+
+/* ── HONEST BANNER ── */
+.banner{
+  background:linear-gradient(135deg,rgba(255,61,90,0.08),rgba(255,107,53,0.06));
+  border:1px solid rgba(255,61,90,0.2);
+  border-radius:12px;padding:18px 22px;margin-bottom:40px;
+  display:flex;gap:14px;align-items:flex-start;
+}
+.banner-icon{font-size:20px;flex-shrink:0;margin-top:2px}
+.banner-title{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--red);margin-bottom:4px}
+.banner-text{font-size:13px;color:var(--text2);line-height:1.6}
+.banner-text b{color:var(--text)}
+
+/* ── SECTION HEADERS ── */
+.section{margin-bottom:56px}
+.section-head{
+  display:flex;align-items:center;gap:14px;margin-bottom:24px;
+  padding-bottom:14px;border-bottom:1px solid var(--border);
+}
+.section-num{
+  font-family:'JetBrains Mono',monospace;font-size:11px;
+  color:var(--cyan);letter-spacing:.1em;
+  border:1px solid rgba(0,212,255,0.2);
+  padding:3px 10px;border-radius:4px;
+  background:rgba(0,212,255,0.05);flex-shrink:0;
+}
+.section-title{font-family:'Syne',sans-serif;font-size:22px;font-weight:700}
+.section-desc{font-size:13px;color:var(--text2);margin-top:4px}
+
+/* ── SALARY LADDER ── */
+.ladder{display:flex;gap:8px;align-items:flex-end;height:160px;margin-bottom:12px}
+.ladder-bar{
+  flex:1;border-radius:6px 6px 0 0;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  padding:8px 6px;position:relative;cursor:default;
+  transition:filter .2s;
+}
+.ladder-bar:hover{filter:brightness(1.2)}
+.ladder-lpa{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;text-align:center}
+.ladder-label{font-size:10px;color:rgba(255,255,255,0.5);text-align:center;margin-top:3px}
+.ladder-year{font-size:9px;color:rgba(255,255,255,0.35);text-align:center;margin-top:1px}
+
+/* ── PATH CARDS ── */
+.paths{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-bottom:16px}
+.path-card{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:12px;overflow:hidden;
+  transition:border-color .2s,transform .2s;
+  cursor:pointer;
+}
+.path-card:hover{border-color:var(--border2);transform:translateY(-2px)}
+.path-head{padding:16px 18px 14px;border-bottom:1px solid var(--border)}
+.path-accent{width:3px;height:100%;border-radius:2px;position:absolute;left:0;top:0}
+.path-rank{
+  font-family:'JetBrains Mono',monospace;font-size:28px;font-weight:300;
+  opacity:.15;position:absolute;top:12px;right:16px;
+}
+.path-name{font-family:'Syne',sans-serif;font-size:16px;font-weight:700;margin-bottom:4px}
+.path-salary{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:500}
+.path-body{padding:14px 18px}
+.path-desc{font-size:12px;color:var(--text2);line-height:1.6;margin-bottom:12px}
+
+/* ── TAGS ── */
+.tags{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:10px}
+.tag{
+  font-size:10px;padding:2px 8px;border-radius:4px;
+  border:1px solid var(--border);color:var(--text3);
+  font-family:'JetBrains Mono',monospace;
+}
+.tag-hot{border-color:rgba(255,107,53,0.3);color:var(--orange);background:rgba(255,107,53,0.05)}
+.tag-new{border-color:rgba(0,255,136,0.3);color:var(--green);background:rgba(0,255,136,0.05)}
+.tag-rare{border-color:rgba(168,85,247,0.3);color:var(--purple);background:rgba(168,85,247,0.05)}
+
+/* ── TIMELINE PHASE ── */
+.phase{
+  position:relative;
+  padding-left:40px;
+  margin-bottom:32px;
+}
+.phase::before{
+  content:'';
+  position:absolute;left:14px;top:36px;bottom:0;
+  width:1px;background:var(--border);
+}
+.phase-dot{
+  position:absolute;left:6px;top:8px;
+  width:18px;height:18px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:9px;font-weight:700;font-family:'JetBrains Mono',monospace;
+  border:1px solid;
+}
+.phase-label{
+  font-family:'Syne',sans-serif;font-size:16px;font-weight:700;
+  margin-bottom:4px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+}
+.phase-meta{font-size:11px;color:var(--text3);font-family:'JetBrains Mono',monospace;margin-bottom:14px}
+.phase-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px}
+
+/* ── SKILL BLOCKS ── */
+.skill-block{
+  background:var(--surface2);border:1px solid var(--border);
+  border-radius:8px;padding:12px 14px;
+}
+.skill-block-title{
+  font-family:'Syne',sans-serif;font-size:13px;font-weight:600;
+  margin-bottom:6px;display:flex;align-items:center;gap:6px;
+}
+.skill-block-desc{font-size:11px;color:var(--text2);line-height:1.5;margin-bottom:8px}
+.skill-block-items{list-style:none;display:flex;flex-direction:column;gap:3px}
+.skill-block-items li{
+  font-size:11px;color:var(--text2);
+  display:flex;align-items:baseline;gap:6px;
+}
+.skill-block-items li::before{content:'›';color:var(--cyan);font-size:12px}
+.skill-link{
+  display:inline-flex;align-items:center;gap:4px;
+  font-size:10px;font-family:'JetBrains Mono',monospace;
+  color:var(--cyan);text-decoration:none;
+  border:1px solid rgba(0,212,255,0.2);
+  padding:2px 8px;border-radius:4px;margin-top:6px;
+  background:rgba(0,212,255,0.04);
+  transition:background .2s;
+}
+.skill-link:hover{background:rgba(0,212,255,0.1)}
+
+/* ── CERTS ── */
+.certs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+.cert-card{
+  background:var(--surface);border:1px solid var(--border);border-radius:8px;
+  padding:12px 14px;position:relative;overflow:hidden;
+}
+.cert-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+}
+.cert-name{font-family:'Syne',sans-serif;font-size:12px;font-weight:700;margin-bottom:4px}
+.cert-by{font-size:10px;color:var(--text3);margin-bottom:6px;font-family:'JetBrains Mono',monospace}
+.cert-salary{font-size:11px;font-weight:500;margin-bottom:6px}
+.cert-fee{font-size:10px;color:var(--text3)}
+.cert-link{
+  display:inline-block;font-size:10px;font-family:'JetBrains Mono',monospace;
+  color:var(--cyan);text-decoration:none;
+  margin-top:4px;
+}
+
+/* ── PROJECTS ── */
+.projects{display:flex;flex-direction:column;gap:14px}
+.project-card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:10px;padding:16px 18px;
+  display:grid;grid-template-columns:auto 1fr;gap:16px;
+  transition:border-color .2s;
+}
+.project-card:hover{border-color:var(--border2)}
+.project-num{
+  font-family:'Syne',sans-serif;font-size:36px;font-weight:800;
+  opacity:.1;line-height:1;align-self:start;
+}
+.project-title{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;margin-bottom:6px}
+.project-desc{font-size:12px;color:var(--text2);line-height:1.6;margin-bottom:8px}
+.project-stack{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:6px}
+.project-impact{
+  font-size:11px;color:var(--green);
+  font-family:'JetBrains Mono',monospace;
+}
+
+/* ── TECH STACK ── */
+.tech-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px}
+.tech-item{
+  background:var(--surface2);border:1px solid var(--border);border-radius:6px;
+  padding:10px 12px;display:flex;align-items:center;gap:8px;
+}
+.tech-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+.tech-name{font-size:12px;font-weight:500}
+.tech-type{font-size:10px;color:var(--text3)}
+
+/* ── MS PATH ── */
+.ms-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.ms-card{
+  background:var(--surface);border:1px solid var(--border);border-radius:10px;
+  padding:14px 16px;position:relative;overflow:hidden;
+}
+.ms-card::after{
+  content:'';position:absolute;bottom:0;right:0;
+  width:80px;height:80px;
+  border-radius:50%;opacity:.04;
+}
+.ms-uni{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;margin-bottom:2px}
+.ms-prog{font-size:11px;color:var(--text2);margin-bottom:8px}
+.ms-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px}
+.ms-key{font-size:10px;color:var(--text3)}
+.ms-val{font-size:11px;font-weight:500}
+.ms-salary{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;margin-top:8px}
+
+/* ── COMPANIES ── */
+.companies{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px}
+.company-card{
+  background:var(--surface);border:1px solid var(--border);border-radius:8px;
+  padding:12px 14px;text-align:center;transition:border-color .2s,transform .2s;
+}
+.company-card:hover{border-color:var(--border2);transform:translateY(-2px)}
+.company-name{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;margin-bottom:4px}
+.company-type{font-size:10px;color:var(--text3);font-family:'JetBrains Mono',monospace;margin-bottom:6px}
+.company-pay{font-size:14px;font-weight:700}
+
+/* ── CHECKLIST ── */
+.checklist{display:flex;flex-direction:column;gap:6px}
+.check-item{
+  display:flex;gap:10px;align-items:flex-start;
+  padding:10px 12px;background:var(--surface2);border-radius:6px;
+  border:1px solid var(--border);
+}
+.check-box{
+  width:18px;height:18px;border-radius:4px;border:1px solid var(--border2);
+  flex-shrink:0;margin-top:1px;display:flex;align-items:center;justify-content:center;
+}
+.check-text{font-size:12px;color:var(--text2);line-height:1.5}
+.check-text b{color:var(--text)}
+
+/* ── NAV ── */
+.nav{
+  position:sticky;top:0;z-index:100;
+  background:rgba(5,8,16,0.85);backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);
+  padding:0 24px;overflow-x:auto;
+}
+.nav-inner{
+  max-width:1100px;margin:0 auto;
+  display:flex;gap:0;
+}
+.nav-item{
+  padding:14px 16px;font-size:11px;letter-spacing:.06em;
+  color:var(--text3);cursor:pointer;white-space:nowrap;
+  border-bottom:2px solid transparent;transition:color .2s,border-color .2s;
+  font-family:'JetBrains Mono',monospace;text-decoration:none;display:block;
+}
+.nav-item:hover{color:var(--cyan);border-bottom-color:rgba(0,212,255,0.3)}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeDown{from{opacity:0;transform:translateY(-12px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse{0%,100%{opacity:.4}50%{opacity:1}}
+
+/* ── MISC ── */
+.divider{height:1px;background:var(--border);margin:40px 0}
+.mono{font-family:'JetBrains Mono',monospace}
+.accent-cyan{color:var(--cyan)}
+.accent-green{color:var(--green)}
+.accent-orange{color:var(--orange)}
+.accent-purple{color:var(--purple)}
+.accent-red{color:var(--red)}
+.accent-gold{color:var(--gold)}
+.label{
+  font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;
+  color:var(--text3);margin-bottom:16px;display:block;
+}
+a{color:inherit;text-decoration:none}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#reality" class="nav-item">REALITY CHECK</a>
+    <a href="#ladder" class="nav-item">SALARY LADDER</a>
+    <a href="#paths" class="nav-item">5 ELITE PATHS</a>
+    <a href="#roadmap" class="nav-item">YEAR-BY-YEAR</a>
+    <a href="#certs" class="nav-item">CERTIFICATIONS</a>
+    <a href="#projects" class="nav-item">PROJECTS</a>
+    <a href="#stack" class="nav-item">TECH STACK</a>
+    <a href="#ms" class="nav-item">FOREIGN MS</a>
+    <a href="#companies" class="nav-item">WHO PAYS ₹60L</a>
+    <a href="#checklist" class="nav-item">CHECKLIST</a>
+  </div>
+</nav>
+
+<div class="wrap">
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-badge">⚡ BTech Y1 → ₹60 LPA ELITE ROADMAP</div>
+  <h1>AI + Cybersecurity<br><span>₹60 LPA & Beyond</span></h1>
+  <p class="hero-sub">The complete, no-fluff, conversation-backed guide to becoming one of India's rarest technical professionals — built specifically for you.</p>
+  <div class="hero-stats">
+    <div class="stat"><div class="stat-n">₹60L</div><div class="stat-l">TARGET SALARY</div></div>
+    <div class="stat"><div class="stat-n">1:10</div><div class="stat-l">AI ENG SUPPLY GAP</div></div>
+    <div class="stat"><div class="stat-n">41%</div><div class="stat-l">AI SECURITY SKILL GAP</div></div>
+    <div class="stat"><div class="stat-n">3–5yr</div><div class="stat-l">REALISTIC TIMELINE</div></div>
+    <div class="stat"><div class="stat-n">4,000</div><div class="stat-l">AIGP HOLDERS GLOBAL</div></div>
+  </div>
+</div>
+
+<!-- REALITY CHECK -->
+<div id="reality" class="section">
+  <div class="banner">
+    <div class="banner-icon">⚠️</div>
+    <div>
+      <div class="banner-title">THE HONEST TRUTH — READ THIS FIRST</div>
+      <div class="banner-text">
+        <b>₹60 LPA on Day 1 of placement is almost impossible</b> unless you're an IITian at FAANG direct hire. The real path: <b>placement at ₹15–20 LPA → switch to GCC at Yr 2–3 for 60–80% jump → ₹35–50L → specialise further → ₹60L+ by Yr 4–5.</b> Anyone selling shortcuts is lying. This roadmap gives you the fastest <i>honest</i> path. DSA is non-negotiable at every stage — no amount of AI specialisation bypasses Google/Amazon's coding rounds. Certs without projects = ₹3–4 LPA. Certs + shipped projects + public research = ₹8–20 LPA. Loyalty kills salary — switch companies every 2–3 years.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SALARY LADDER -->
+<div id="ladder" class="section">
+  <div class="section-head">
+    <div class="section-num">01</div>
+    <div>
+      <div class="section-title">The Salary Ladder You're Climbing</div>
+      <div class="section-desc">Realistic milestones — each step requires specific actions, not just time</div>
+    </div>
+  </div>
+  <div class="ladder">
+    <div class="ladder-bar" style="background:linear-gradient(to top,#1a2040,#253060);height:20%">
+      <div class="ladder-lpa accent-cyan">₹8–12L</div>
+      <div class="ladder-label">PLACEMENT</div>
+      <div class="ladder-year">service co.</div>
+    </div>
+    <div class="ladder-bar" style="background:linear-gradient(to top,#0f3028,#1a5040);height:32%">
+      <div class="ladder-lpa accent-green">₹15–20L</div>
+      <div class="ladder-label">PLACEMENT</div>
+      <div class="ladder-year">product co. target</div>
+    </div>
+    <div class="ladder-bar" style="background:linear-gradient(to top,#1a2a0a,#2d4a12);height:48%">
+      <div class="ladder-lpa accent-green">₹25–35L</div>
+      <div class="ladder-label">YR 2–3</div>
+      <div class="ladder-year">first switch</div>
+    </div>
+    <div class="ladder-bar" style="background:linear-gradient(to top,#301a08,#5a3012);height:65%">
+      <div class="ladder-lpa accent-orange">₹40–55L</div>
+      <div class="ladder-label">YR 3–5</div>
+      <div class="ladder-year">GCC / senior</div>
+    </div>
+    <div class="ladder-bar" style="background:linear-gradient(to top,#30080f,#60101e);height:85%">
+      <div class="ladder-lpa accent-red">₹60–80L</div>
+      <div class="ladder-label">YR 5–7</div>
+      <div class="ladder-year">remote US / lead</div>
+    </div>
+    <div class="ladder-bar" style="background:linear-gradient(to top,#2a2000,#554000);height:100%">
+      <div class="ladder-lpa accent-gold">₹1Cr+</div>
+      <div class="ladder-label">YR 8+</div>
+      <div class="ladder-year">principal / CISO</div>
+    </div>
+  </div>
+  <p style="font-size:12px;color:var(--text3);margin-top:8px">Switch companies at Yr 2–3 for a 60–80% salary jump. Service → Product → GCC → Remote US. Loyalty is the biggest salary killer.</p>
+</div>
+
+<!-- 5 ELITE PATHS -->
+<div id="paths" class="section">
+  <div class="section-head">
+    <div class="section-num">02</div>
+    <div>
+      <div class="section-title">5 Elite Paths — Ranked by Scarcity × Salary</div>
+      <div class="section-desc">Your recommended combo: Path 1 core + Path 2 layer + Path 5 bonus = the ₹60L trifecta</div>
+    </div>
+  </div>
+  <div class="paths">
+
+    <!-- PATH 1 -->
+    <div class="path-card" style="border-color:rgba(255,61,90,0.2);grid-column:span 2" onclick="document.getElementById('roadmap').scrollIntoView({behavior:'smooth'})">
+      <div style="position:relative">
+        <div style="height:3px;background:linear-gradient(90deg,var(--red),var(--orange))"></div>
+        <div class="path-head" style="position:relative">
+          <div class="path-rank" style="color:var(--red)">01</div>
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:8px">
+            <div>
+              <div class="path-name">Agentic AI Security Engineer</div>
+              <div style="font-size:12px;color:var(--text2);margin-top:2px">Securing & attacking autonomous multi-agent AI systems</div>
+            </div>
+            <div style="text-align:right">
+              <div class="path-salary accent-red">₹40–65 LPA</div>
+              <div style="font-size:10px;color:var(--text3)">mid-level India</div>
+            </div>
+          </div>
+          <div class="tags" style="margin-top:10px">
+            <span class="tag tag-hot">🔥 #1 threat 2026</span>
+            <span class="tag tag-rare">🔮 rarest skill</span>
+            <span class="tag tag-new">⚡ almost nobody has it</span>
+          </div>
+        </div>
+        <div class="path-body">
+          <p class="path-desc">48% of CISOs rank agentic AI as the #1 attack surface of 2026. AI agents carry elevated permissions with wide-reaching access — privilege escalation, memory poisoning, tool misuse, MCP server hijacking, cascading failures across multi-agent systems. Zero Indian universities teach this. You could be among the first 500 professionals in the country who genuinely master it.</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:8px">
+            <div class="skill-block">
+              <div class="skill-block-title">🔐 Attack surface</div>
+              <ul class="skill-block-items">
+                <li>MCP server vulnerabilities</li>
+                <li>Tool poisoning attacks</li>
+                <li>Privilege escalation</li>
+                <li>Memory poisoning</li>
+                <li>NHI (non-human identity) attacks</li>
+                <li>Cross-agent injection</li>
+              </ul>
+            </div>
+            <div class="skill-block">
+              <div class="skill-block-title">🛡️ Defence skills</div>
+              <ul class="skill-block-items">
+                <li>Agent sandboxing</li>
+                <li>Permission minimisation</li>
+                <li>Audit logging for agents</li>
+                <li>Secure tool registration</li>
+                <li>Human-in-the-loop controls</li>
+                <li>Agent monitoring systems</li>
+              </ul>
+            </div>
+            <div class="skill-block">
+              <div class="skill-block-title">📚 Resources</div>
+              <ul class="skill-block-items">
+                <li>Anthropic agent docs</li>
+                <li>OWASP Agentic AI Top 10</li>
+                <li>bvp.com/atlas</li>
+                <li>Microsoft PyRIT</li>
+              </ul>
+              <a href="https://docs.anthropic.com/en/docs/agents" target="_blank" class="skill-link">→ Anthropic Agents</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PATH 2 -->
+    <div class="path-card" style="border-color:rgba(255,107,53,0.2)">
+      <div>
+        <div style="height:3px;background:linear-gradient(90deg,var(--orange),var(--gold))"></div>
+        <div class="path-head" style="position:relative">
+          <div class="path-rank" style="color:var(--orange)">02</div>
+          <div class="path-name">LLM Security Engineer</div>
+          <div style="font-size:12px;color:var(--text2);margin-top:2px">Securing LLM deployments end-to-end</div>
+          <div class="path-salary accent-orange" style="margin-top:6px">₹25–50 LPA</div>
+          <div class="tags" style="margin-top:8px">
+            <span class="tag tag-hot">🔥 every company needs this</span>
+          </div>
+        </div>
+        <div class="path-body">
+          <p class="path-desc">Every company deploying an LLM is exposed. Almost nobody who builds them knows how to secure them. You become the bridge.</p>
+          <ul class="skill-block-items" style="margin-top:8px">
+            <li>OWASP LLM Top 10 mastery</li>
+            <li>Prompt injection (direct + indirect)</li>
+            <li>Data leakage prevention</li>
+            <li>Model extraction attacks</li>
+            <li>Supply chain security</li>
+            <li>Jailbreak research & defence</li>
+          </ul>
+          <a href="https://owasp.org/www-project-top-10-for-large-language-model-applications/" target="_blank" class="skill-link">→ OWASP LLM Top 10</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PATH 3 -->
+    <div class="path-card" style="border-color:rgba(168,85,247,0.2)">
+      <div>
+        <div style="height:3px;background:linear-gradient(90deg,var(--purple),var(--blue))"></div>
+        <div class="path-head" style="position:relative">
+          <div class="path-rank" style="color:var(--purple)">03</div>
+          <div class="path-name">AI Red Team Researcher</div>
+          <div style="font-size:12px;color:var(--text2);margin-top:2px">Professionally attacking AI systems</div>
+          <div class="path-salary accent-purple" style="margin-top:6px">₹20–45 LPA + bounties</div>
+          <div class="tags" style="margin-top:8px">
+            <span class="tag tag-rare">🔮 public results = inbound offers</span>
+          </div>
+        </div>
+        <div class="path-body">
+          <p class="path-desc">A HackAPrompt ranking or DEF CON AI Village result is worth more than 5 certifications. Proof beats credentials.</p>
+          <ul class="skill-block-items" style="margin-top:8px">
+            <li>Microsoft PyRIT framework</li>
+            <li>Adversarial ML techniques</li>
+            <li>Bias and safety probing</li>
+            <li>Multimodal attack vectors</li>
+            <li>CVE discovery & reporting</li>
+            <li>AI bug bounty programs</li>
+          </ul>
+          <a href="https://github.com/Azure/PyRIT" target="_blank" class="skill-link">→ PyRIT on GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PATH 4 -->
+    <div class="path-card" style="border-color:rgba(59,130,246,0.2)">
+      <div>
+        <div style="height:3px;background:linear-gradient(90deg,var(--blue),var(--cyan))"></div>
+        <div class="path-head" style="position:relative">
+          <div class="path-rank" style="color:var(--blue)">04</div>
+          <div class="path-name">Secure MLOps Engineer</div>
+          <div style="font-size:12px;color:var(--text2);margin-top:2px">Deploying AI securely in production</div>
+          <div class="path-salary accent-cyan" style="margin-top:6px">₹18–45 LPA</div>
+          <div class="tags" style="margin-top:8px">
+            <span class="tag tag-new">⚡ GCCs love this combo</span>
+          </div>
+        </div>
+        <div class="path-body">
+          <p class="path-desc">40–60% premium over pure ML engineers. You keep AI systems alive AND secure in production.</p>
+          <ul class="skill-block-items" style="margin-top:8px">
+            <li>Docker + secure containerisation</li>
+            <li>Model drift & anomaly detection</li>
+            <li>Secure CI/CD for AI pipelines</li>
+            <li>FastAPI security for ML endpoints</li>
+            <li>AWS SageMaker / Azure ML security</li>
+            <li>Adversarial input monitoring</li>
+          </ul>
+          <a href="https://mlflow.org/" target="_blank" class="skill-link">→ MLflow Docs</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PATH 5 -->
+    <div class="path-card" style="border-color:rgba(0,255,136,0.15)">
+      <div>
+        <div style="height:3px;background:linear-gradient(90deg,var(--green),var(--cyan))"></div>
+        <div class="path-head" style="position:relative">
+          <div class="path-rank" style="color:var(--green)">05</div>
+          <div class="path-name">AI Governance Specialist</div>
+          <div style="font-size:12px;color:var(--text2);margin-top:2px">DPDP · NIST RMF · ISO 42001 · EU AI Act</div>
+          <div class="path-salary accent-green" style="margin-top:6px">₹15–35 LPA</div>
+          <div class="tags" style="margin-top:8px">
+            <span class="tag tag-new">⚡ DPDP enforcement Nov 2026</span>
+          </div>
+        </div>
+        <div class="path-body">
+          <p class="path-desc">Add as a second layer — engineer who speaks governance = ₹20L premium. Mandatory for GCC roles.</p>
+          <ul class="skill-block-items" style="margin-top:8px">
+            <li>India DPDP Act + Rules 2025</li>
+            <li>NIST AI RMF (Govern/Map/Measure/Manage)</li>
+            <li>ISO/IEC 42001 AIMS implementation</li>
+            <li>RBI & SEBI AI mandates</li>
+            <li>EU AI Act risk tiers</li>
+            <li>AI bias auditing (Fairlearn, AIF360)</li>
+          </ul>
+          <a href="https://www.nist.gov/artificial-intelligence/executive-order-safe-secure-and-trustworthy-artificial-intelligence" target="_blank" class="skill-link">→ NIST AI RMF</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- YEAR BY YEAR ROADMAP -->
+<div id="roadmap" class="section">
+  <div class="section-head">
+    <div class="section-num">03</div>
+    <div>
+      <div class="section-title">Year-by-Year Roadmap</div>
+      <div class="section-desc">BTech Y1 → elite placement → ₹60 LPA. Each phase has specific outputs you must produce.</div>
+    </div>
+  </div>
+
+  <!-- YEAR 1 -->
+  <div class="phase">
+    <div class="phase-dot" style="background:rgba(0,212,255,0.1);border-color:var(--cyan);color:var(--cyan)">Y1</div>
+    <div class="phase-label">
+      <span style="color:var(--cyan)">Year 1 — Foundation of Excellence</span>
+      <span class="tag tag-new">Sem 1–2</span>
+    </div>
+    <div class="phase-meta">TARGET: Be in top 1% of Y1 students nationally · 3 certs · 1 live project · LeetCode habit</div>
+    <div class="phase-grid">
+      <div class="skill-block">
+        <div class="skill-block-title">🐍 Python — Master Level</div>
+        <div class="skill-block-desc">Not just basics. Production-quality code. This is the filter every elite role applies.</div>
+        <ul class="skill-block-items">
+          <li>OOP, decorators, context managers</li>
+          <li>Async/await, threading</li>
+          <li>REST API calls with requests</li>
+          <li>File I/O, JSON, error handling</li>
+          <li>Unit testing with pytest</li>
+        </ul>
+        <a href="https://cs50.harvard.edu/python/2022/" target="_blank" class="skill-link">→ CS50P (free)</a>
+      </div>
+      <div class="skill-block">
+        <div class="skill-block-title">🧮 DSA — Start NOW</div>
+        <div class="skill-block-desc">FAANG/GCC filter 90% of candidates here. 2–3 problems daily from Day 1.</div>
+        <ul class="skill-block-items">
+          <li>Arrays, strings, hashmaps</li>
+          <li>Trees, graphs, recursion</li>
+          <li>Dynamic programming basics</li>
+          <li>Sorting & searching algorithms</li>
+          <li>Time/space complexity</li>
+        </ul>
+        <a href="https://leetcode.com" target="_blank" class="skill-link">→ LeetCode (free)</a>
+      </div>
+      <div class="skill-block">
+        <div class="skill-block-title">🧠 AI/ML Fundamentals Deep</div>
+        <div class="skill-block-desc">Math behind ML — elite roles test this in interviews. Not optional.</div>
+        <ul class="skill-block-items">
+          <li>Linear algebra basics (vectors, matrices)</li>
+          <li>Probability & statistics</li>
+          <li>Gradient descent intuition</li>
+          <li>Transformers & attention mechanism</li>
+          <li>Tokens, embeddings, inference</li>
+        </ul>
+        <a href="https://cs50.harvard.edu/ai/2024/" target="_blank" class="skill-link">→ CS50 AI (free)</a>
+      </div>
+      <div class="skill-block">
+        <div class="skill-block-title">🖥️ Linux + Networking</div>
+        <div class="skill-block-desc">96% of servers run Linux. Every security job requires command line fluency.</div>
+        <ul class="skill-block-items">
+          <li>Bash, file permissions, SSH</li>
+          <li>TCP/IP, DNS, HTTP/HTTPS</li>
+          <li>Ports, protocols, firewalls</li>
+          <li>Netcat, Wireshark basics</li>
+          <li>Linux privilege basics</li>
+        </ul>
+        <a href="https://tryhackme.com/path/outline/presecurity" target="_blank" class="skill-link">→ TryHackMe Pre-Security (free)</a>
+      </div>
+      <div class="skill-block">
+        <div class="skill-block-title">📜 3 Foundation Certs</div>
+        <div class="skill-block-desc">All free. Gets your resume past ATS filters from Sem 1 itself.</div>
+        <ul class="skill-block-items">
+          <li>Anthropic AI Fluency</li>
+          <li>Google AI Essentials</li>
+          <li>Microsoft AI-900</li>
+        </ul>
+        <a href="https://anthropic.skilljar.com/ai-fluency-framework-foundations" target="_blank" class="skill-link">→ Anthropic AI Fluency</a>
+      </div>
+      <div class="skill-block" style="border-color:rgba(0,212,255,0.2)">
+        <div class="skill-block-title">🏗️ Y1 Project — SHIP THIS</div>
+        <div class="skill-block-desc">Most Y1 students have zero projects. One live app separates you.</div>
+        <ul class="skill-block-items">
+          <li>Claude API chatbot with memory</li>
+          <li>Multi-turn conversation + tool use</li>
+          <li>Simple web UI (Streamlit/FastAPI)</li>
+          <li>Deployed free on Render/Vercel</li>
+          <li>Clean GitHub README + demo link</li>
+        </ul>
+        <a href="https://docs.anthropic.com/en/api/getting-started" target="_blank" class="skill-link">→ Claude API Docs</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- YEAR 2 -->
+  <div class="phase">
+    <div class="phase-dot" style="background:rgba(0,255,136,0.1);border-color:var(--green);color:var(--green)">Y2</div>
+    <div class="phase-label">
+      <span style="color:var(--green)">Year 2 — Specialise + Build Reputation</span>
+      <span class="tag tag-new">Sem 3–4</span>
+    </div>
+    <div class="phase-meta">TARGET: Product company or AI startup internship · 2 deployed projects · ISC2 CC cert · Open source PR</div>
+    <div class="phase-grid">
+      <div class="skill-block">
+        <div class="skill-block-title">⚙️ LLM Engineering Deep</div>
+        <div class="skill-block-desc">Highest-paid AI fresher track. This is where Python + AI converge into real value.</div>
+        <ul class="skill-block-items">
+          <li>RAG pipelines from scratch</li>
+          <li>Vector DBs: Pinecone, ChromaDB</li>
+          <li>Embeddings & semantic search</li>
+          <li>LangChain + LlamaIndex</li>
+          <li>Fine-tuning basics (LoRA, PEFT)</li>
+          <li>Claude API: streaming, tool use, vision</li>
+        </ul>
+        <a href="https://anthropic.skilljar.com/claude-with-the-anthropic-api" target="_blank" class="skill-link">→ Anthropic API Course (free)</a>
+      </div>
+      <div class="skill-block">
+        <div class="skill-block-title">🤖 AI Agents</div>
+        <div class="skill-block-desc">Agentic AI Developer = highest-paid fresher role in India 2026 at ₹8–16 LPA.</div>
+        <ul class="skill-block-items">
+          <li>Agentic loops & planning patterns</li>
+          <li>Tool calling & function calling</li>
+          <li>AutoGen, CrewAI, LangGraph</li>
+          <li>MCP (Model Context Protocol)</li>
+          <li>Multi-agent orchestration</li>
+          <li>Agent memory systems</li>
+        </ul>
+        <a href="https://www.deeplearning.ai/short-courses/" target="_blank" class="skill-link">→ DeepLearning.AI (free short courses)</a>
+      </div>
+      <div class="skill-block">
+        <div class="skill-block-title">🚀 MLOps + Deployment</div>
+        <div class="skill-block-desc">40–60% salary premium over pure ML. Rarest combo skill in India.</div>
+        <ul class="skill-block-items">
+          <li>Docker & containerisation</li>
+          <li>FastAPI for ML serving</li>
+          <li>GitHub Actions CI/CD</li>
+          <li>MLflow experiment tracking</li>
+          <li>Model monitoring & drift detection</li>
+          <li>AWS SageMaker basics</li>
+        </ul>
+        <a href="https://mlflow.org/docs/latest/index.html" target="_blank" class="skill-link">→ MLflow Docs (free)</a>
+      </div>
+      <div class="skill-block">
+        <div class="skill-block-title">☁️ Cloud Certification</div>
+        <div class="skill-block-desc">GCCs (JP Morgan, Goldman, Walmart) require cloud knowledge. Adds ₹2–4 LPA instantly.</div>
+        <ul class="skill-block-items">
+          <li>AWS Cloud Practitioner → AWS ML Specialty</li>
+          <li>OR Azure AI-900 → AI-102</li>
+          <li>Cloud security fundamentals</li>
+          <li>IAM, VPC, S3 security</li>
+          <li>Serverless AI deployment</li>
+        </ul>
+        <a href="https://aws.amazon.com/certification/certified-machine-learning-specialty/" target="_blank" class="skill-link">→ AWS ML Specialty</a>
+      </div>
+      <div class="skill-block">
+        <div class="skill-block-title">🔐 Security Foundations</div>
+        <div class="skill-block-desc">ISC2 CC is 100% free — the entry cert every security employer recognises.</div>
+        <ul class="skill-block-items">
+          <li>ISC2 CC (Certified in Cybersecurity)</li>
+          <li>TryHackMe Jr Pen Tester path</li>
+          <li>OWASP Top 10 (web)</li>
+          <li>Network security basics</li>
+          <li>Cryptography fundamentals</li>
+          <li>HackTheBox Starting Point</li>
+        </ul>
+        <a href="https://www.isc2.org/certifications/cc" target="_blank" class="skill-link">→ ISC2 CC (free exam)</a>
+      </div>
+      <div class="skill-block" style="border-color:rgba(0,255,136,0.2)">
+        <div class="skill-block-title">🏗️ Y2 Projects — 2 Required</div>
+        <div class="skill-block-desc">Both deployed live. Both on GitHub. Apply for internships after Project A.</div>
+        <ul class="skill-block-items">
+          <li><b>Project A:</b> RAG-powered security knowledge base (real CVE data + Claude API)</li>
+          <li><b>Project B:</b> AI threat detection system using Kaggle security datasets</li>
+          <li>Both with live demo URLs</li>
+          <li>Clean documentation + architecture diagrams</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- YEAR 3 -->
+  <div class="phase">
+    <div class="phase-dot" style="background:rgba(255,107,53,0.1);border-color:var(--orange);color:var(--orange)">Y3</div>
+    <div class="phase-label">
+      <span style="color:var(--orange)">Year 3 — AI Security Specialist</span>
+      <span class="tag tag-hot">Sem 5–6</span>
+    </div>
+    <div class="phase-meta">TARGET: ₹15–20 LPA placement offer · CompTIA SecAI+ · Red team competition result · Published research</div>
+    <div class="phase-grid">
+      <div class="skill-block">
+        <div class="skill-block-title">🔓 LLM Security — Expert</div>
+        <div class="skill-block-desc">Read every published CVE. Become known for analysis on LinkedIn.</div>
+        <ul class="skill-block-items">
+          <li>OWASP LLM Top 10 cover-to-cover</li>
+          <li>Prompt injection (direct + indirect)</li>
+          <li>Data poisoning & backdoor attacks</li>
+          <li>Model extraction & inversion</li>
+          <li>AI supply chain security</li>
+          <li>MITRE ATLAS framework</li>
+        </ul>
+        <a href="https://atlas.mitre.org/" target="_blank" class="skill-link">→ MITRE ATLAS (free)</a>
+      </div>
+      <div class="skill-block">
+        <div class="skill-block-title">🤖 Agentic AI Security</div>
+        <div class="skill-block-desc">#1 attack surface of 2026. Almost no Indian fresher has this. Your biggest differentiator.</div>
+        <ul class="skill-block-items">
+          <li>MCP server vulnerabilities</li>
+          <li>Tool poisoning attacks</li>
+          <li>Memory & context poisoning</li>
+          <li>Privilege escalation in agents</li>
+          <li>NHI (API keys, OAuth) security</li>
+          <li>OWASP Agentic AI Top 10</li>
+        </ul>
+        <a href="https://github.com/Azure/PyRIT" target="_blank" class="skill-link">→ Microsoft PyRIT (free)</a>
+      </div>
+      <div class="skill-block">
+        <div class="skill-block-title">🎯 AI Red Teaming</div>
+        <div class="skill-block-desc">Participate in HackAPrompt — a public result here is worth more than any cert.</div>
+        <ul class="skill-block-items">
+          <li>Adversarial prompting techniques</li>
+          <li>Automated red teaming with PyRIT</li>
+          <li>Multimodal attack vectors</li>
+          <li>Deepfake detection & attacks</li>
+          <li>Bias probing & safety evaluation</li>
+          <li>Writing professional pentest reports</li>
+        </ul>
+        <a href="https://www.hackaprompt.com/" target="_blank" class="skill-link">→ HackAPrompt Competition</a>
+      </div>
+      <div class="skill-block">
+        <div class="skill-block-title">🏅 CompTIA SecAI+ <span class="tag tag-new" style="font-size:9px;padding:1px 5px">Feb 2026</span></div>
+        <div class="skill-block-desc">First vendor-neutral AI security cert. Zero freshers have it. Massive interview differentiator.</div>
+        <ul class="skill-block-items">
+          <li>AI model security & hardening</li>
+          <li>Prompt security controls</li>
+          <li>AI data pipeline security</li>
+          <li>AI governance basics</li>
+          <li>Responsible AI deployment</li>
+        </ul>
+        <a href="https://www.comptia.org/" target="_blank" class="skill-link">→ CompTIA Website</a>
+      </div>
+      <div class="skill-block">
+        <div class="skill-block-title">📋 AI Governance Layer</div>
+        <div class="skill-block-desc">Add as second language — engineers who speak governance earn ₹20L premium at GCCs.</div>
+        <ul class="skill-block-items">
+          <li>NIST AI RMF: Govern/Map/Measure/Manage</li>
+          <li>India DPDP Act + Rules 2025</li>
+          <li>ISO/IEC 42001 fundamentals</li>
+          <li>RBI & SEBI AI mandates</li>
+          <li>EU AI Act risk tiers</li>
+          <li>IAPP AIGP certification</li>
+        </ul>
+        <a href="https://iapp.org/certify/aigp/" target="_blank" class="skill-link">→ IAPP AIGP Cert</a>
+      </div>
+      <div class="skill-block" style="border-color:rgba(255,107,53,0.2)">
+        <div class="skill-block-title">🏗️ Y3 Capstone — Showstopper</div>
+        <div class="skill-block-desc">This is what gets you ₹15–20 LPA offers. Submit to DEF CON AI Village.</div>
+        <ul class="skill-block-items">
+          <li><b>Build:</b> AI Agent Red Teaming Framework</li>
+          <li>Automatically attacks chatbots/agents</li>
+          <li>Tests: injection, privilege escalation, data leakage</li>
+          <li>Generates professional pentest report</li>
+          <li>Publish findings as research writeup on Medium + LinkedIn</li>
+          <li>Submit to DEF CON AI Village</li>
+        </ul>
+        <a href="https://aivillage.org/" target="_blank" class="skill-link">→ DEF CON AI Village</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- POST PLACEMENT -->
+  <div class="phase">
+    <div class="phase-dot" style="background:rgba(255,215,0,0.1);border-color:var(--gold);color:var(--gold)">P+</div>
+    <div class="phase-label">
+      <span style="color:var(--gold)">Post-Placement Sprint — ₹60 LPA Race</span>
+      <span class="tag tag-hot">Yr 1–5 working</span>
+    </div>
+    <div class="phase-meta">The 3 moves that actually unlock ₹60 LPA: strategic switch → rare specialisation → public brand</div>
+    <div class="phase-grid">
+      <div class="skill-block" style="border-color:rgba(255,215,0,0.15)">
+        <div class="skill-block-title" style="color:var(--gold)">💥 The Strategic Company Switch</div>
+        <div class="skill-block-desc">Loyalty kills salary growth. Each switch = 60–80% jump.</div>
+        <ul class="skill-block-items">
+          <li>Placement → product co. / AI startup (₹15–20L)</li>
+          <li>Yr 2–3: Switch to GCC → ₹35–50L</li>
+          <li>Yr 4–5: Remote US firm → ₹60–80L</li>
+          <li>JP Morgan Tech, Goldman Sachs, Walmart Global</li>
+          <li>Toptal, Turing for remote US roles</li>
+        </ul>
+      </div>
+      <div class="skill-block" style="border-color:rgba(255,215,0,0.15)">
+        <div class="skill-block-title" style="color:var(--gold)">⭐ Open Source = 1 Year Experience</div>
+        <div class="skill-block-desc">One merged PR in a major repo = equivalent of 1 year exp in recruiters' eyes.</div>
+        <ul class="skill-block-items">
+          <li>LangChain GitHub contributions</li>
+          <li>Hugging Face model cards & safety</li>
+          <li>OWASP project contributions</li>
+          <li>Microsoft PyRIT contributions</li>
+          <li>Start with docs → bug fixes → features</li>
+        </ul>
+        <a href="https://github.com/langchain-ai/langchain" target="_blank" class="skill-link">→ LangChain GitHub</a>
+      </div>
+      <div class="skill-block" style="border-color:rgba(255,215,0,0.15)">
+        <div class="skill-block-title" style="color:var(--gold)">📢 Public Research Brand</div>
+        <div class="skill-block-desc">At ₹60L, companies come to YOU. That requires being findable.</div>
+        <ul class="skill-block-items">
+          <li>Monthly LinkedIn writeups on AI security findings</li>
+          <li>Medium articles on novel attack vectors</li>
+          <li>DEF CON AI Village presentations</li>
+          <li>arxiv preprints on red teaming research</li>
+          <li>TryHackMe / HackTheBox ranked profile</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CERTIFICATIONS -->
+<div id="certs" class="section">
+  <div class="section-head">
+    <div class="section-num">04</div>
+    <div>
+      <div class="section-title">All Certifications — Ordered by When to Take Them</div>
+      <div class="section-desc">Only get certs you can back up with a project. Cert without proof = worthless to elite employers.</div>
+    </div>
+  </div>
+  <div class="certs-grid">
+
+    <div class="cert-card" style="border-color:rgba(0,212,255,0.15)">
+      <div style="height:2px;background:var(--cyan);margin:-12px -14px 12px;"></div>
+      <div class="cert-name">Anthropic AI Fluency</div>
+      <div class="cert-by">ANTHROPIC · SEM 1</div>
+      <div class="cert-salary accent-cyan">Resume filter pass</div>
+      <div class="cert-fee">💰 Free · ~3 hours</div>
+      <a href="https://anthropic.skilljar.com/ai-fluency-framework-foundations" target="_blank" class="cert-link">→ Take course</a>
+    </div>
+
+    <div class="cert-card" style="border-color:rgba(0,212,255,0.15)">
+      <div style="height:2px;background:var(--blue);margin:-12px -14px 12px;"></div>
+      <div class="cert-name">Google AI Essentials</div>
+      <div class="cert-by">GOOGLE · SEM 1</div>
+      <div class="cert-salary accent-cyan">ATS filter pass</div>
+      <div class="cert-fee">💰 Free on Coursera</div>
+      <a href="https://grow.google/certificates/ai-essentials/" target="_blank" class="cert-link">→ Take course</a>
+    </div>
+
+    <div class="cert-card" style="border-color:rgba(0,212,255,0.15)">
+      <div style="height:2px;background:var(--blue);margin:-12px -14px 12px;"></div>
+      <div class="cert-name">Microsoft AI-900</div>
+      <div class="cert-by">MICROSOFT · SEM 1–2</div>
+      <div class="cert-salary accent-cyan">AI fundamentals proof</div>
+      <div class="cert-fee">💰 ~₹4,165 exam</div>
+      <a href="https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-fundamentals/" target="_blank" class="cert-link">→ Learn more</a>
+    </div>
+
+    <div class="cert-card" style="border-color:rgba(0,255,136,0.15)">
+      <div style="height:2px;background:var(--green);margin:-12px -14px 12px;"></div>
+      <div class="cert-name">ISC2 CC</div>
+      <div class="cert-by">ISC2 · SEM 3–4</div>
+      <div class="cert-salary accent-green">First security credential</div>
+      <div class="cert-fee">💰 Free exam (limited time)</div>
+      <a href="https://www.isc2.org/certifications/cc" target="_blank" class="cert-link">→ Register free</a>
+    </div>
+
+    <div class="cert-card" style="border-color:rgba(0,255,136,0.15)">
+      <div style="height:2px;background:var(--green);margin:-12px -14px 12px;"></div>
+      <div class="cert-name">Claude API Developer</div>
+      <div class="cert-by">ANTHROPIC · SEM 3</div>
+      <div class="cert-salary accent-green">LLM engineering proof</div>
+      <div class="cert-fee">💰 Free · 8h+ course</div>
+      <a href="https://anthropic.skilljar.com/claude-with-the-anthropic-api" target="_blank" class="cert-link">→ Take course</a>
+    </div>
+
+    <div class="cert-card" style="border-color:rgba(0,255,136,0.15)">
+      <div style="height:2px;background:var(--blue);margin:-12px -14px 12px;"></div>
+      <div class="cert-name">AWS ML Specialty</div>
+      <div class="cert-by">AMAZON · SEM 4–5</div>
+      <div class="cert-salary accent-green">+₹2–4 LPA premium</div>
+      <div class="cert-fee">💰 ~₹25,000 exam</div>
+      <a href="https://aws.amazon.com/certification/certified-machine-learning-specialty/" target="_blank" class="cert-link">→ Learn more</a>
+    </div>
+
+    <div class="cert-card" style="border-color:rgba(255,107,53,0.2)">
+      <div style="height:2px;background:var(--orange);margin:-12px -14px 12px;"></div>
+      <div class="cert-name">DeepLearning.AI GenAI</div>
+      <div class="cert-by">DEEPLEARNING.AI · SEM 4</div>
+      <div class="cert-salary accent-orange">Most recognised GenAI cert globally</div>
+      <div class="cert-fee">💰 Free short courses + paid specialisations</div>
+      <a href="https://www.deeplearning.ai/" target="_blank" class="cert-link">→ Explore courses</a>
+    </div>
+
+    <div class="cert-card" style="border-color:rgba(255,61,90,0.2)">
+      <div style="height:2px;background:var(--red);margin:-12px -14px 12px;"></div>
+      <div class="cert-name">CompTIA SecAI+</div>
+      <div class="cert-by">COMPTIA · SEM 5–6</div>
+      <div class="cert-salary accent-red">First AI security cert — interview differentiator</div>
+      <div class="cert-fee">💰 ~₹25,000 exam · launched Feb 2026</div>
+      <a href="https://www.comptia.org/" target="_blank" class="cert-link">→ CompTIA.org</a>
+    </div>
+
+    <div class="cert-card" style="border-color:rgba(168,85,247,0.2)">
+      <div style="height:2px;background:var(--purple);margin:-12px -14px 12px;"></div>
+      <div class="cert-name">IAPP AIGP</div>
+      <div class="cert-by">IAPP · SEM 6 / YR 1</div>
+      <div class="cert-salary accent-purple">~4,000 holders globally — extreme scarcity</div>
+      <div class="cert-fee">💰 ~₹80,000 exam + training</div>
+      <a href="https://iapp.org/certify/aigp/" target="_blank" class="cert-link">→ IAPP AIGP</a>
+    </div>
+
+    <div class="cert-card" style="border-color:rgba(255,215,0,0.15)">
+      <div style="height:2px;background:var(--gold);margin:-12px -14px 12px;"></div>
+      <div class="cert-name">CompTIA Security+</div>
+      <div class="cert-by">COMPTIA · YR 1 WORKING</div>
+      <div class="cert-salary accent-gold">Industry baseline security cert</div>
+      <div class="cert-fee">💰 ~₹25,000 exam</div>
+      <a href="https://www.comptia.org/certifications/security" target="_blank" class="cert-link">→ CompTIA Security+</a>
+    </div>
+
+    <div class="cert-card" style="border-color:rgba(255,215,0,0.15)">
+      <div style="height:2px;background:var(--gold);margin:-12px -14px 12px;"></div>
+      <div class="cert-name">ISO 42001 Lead Implementer</div>
+      <div class="cert-by">BSI / PECB · YR 1–2 WORKING</div>
+      <div class="cert-salary accent-gold">GCCs specifically ask for this</div>
+      <div class="cert-fee">💰 ~₹60,000 training + exam</div>
+      <a href="https://pecb.com/en/education-and-certification-for-individuals/iso-iec-42001" target="_blank" class="cert-link">→ PECB ISO 42001</a>
+    </div>
+
+    <div class="cert-card" style="border-color:rgba(255,61,90,0.2)">
+      <div style="height:2px;background:var(--red);margin:-12px -14px 12px;"></div>
+      <div class="cert-name">OSCP / CEH</div>
+      <div class="cert-by">OFFENSIVE SECURITY · YR 2–3</div>
+      <div class="cert-salary accent-red">Elite security credential — respected globally</div>
+      <div class="cert-fee">💰 OSCP ~₹1.2L · CEH ~₹50k</div>
+      <a href="https://www.offsec.com/courses/pen-200/" target="_blank" class="cert-link">→ OffSec OSCP</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- PROJECTS -->
+<div id="projects" class="section">
+  <div class="section-head">
+    <div class="section-num">05</div>
+    <div>
+      <div class="section-title">8 Portfolio Projects — Not Like Everyone Else</div>
+      <div class="section-desc">72% of hired freshers cite portfolio as #1 differentiator. Build things. Deploy them. Talk about them.</div>
+    </div>
+  </div>
+  <div class="projects">
+
+    <div class="project-card">
+      <div class="project-num accent-cyan">01</div>
+      <div>
+        <div class="project-title">Claude-Powered Security Chatbot with Memory + Tool Use <span class="tag tag-new" style="font-size:9px">Y1 · START HERE</span></div>
+        <div class="project-desc">Multi-turn chatbot built on Claude API with persistent memory (Redis/SQLite), tool calling (search CVE databases, check IP reputation), streaming responses, and a clean web UI. Deployed on Render with a public URL. This proves Python + API + RAG + deployment — 4 skills in one project most Y1 students don't have.</div>
+        <div class="project-stack">
+          <span class="tag">Python</span><span class="tag">Claude API</span><span class="tag">FastAPI</span><span class="tag">Redis</span><span class="tag">Streamlit</span><span class="tag">Render</span>
+        </div>
+        <div class="project-impact">→ Proves: LLM engineering + API skills + deployment</div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-num accent-green">02</div>
+      <div>
+        <div class="project-title">RAG-Powered CVE Knowledge Base <span class="tag tag-new" style="font-size:9px">Y2 · PROJECT A</span></div>
+        <div class="project-desc">Ingest the full NVD CVE database into a vector DB (ChromaDB/Pinecone). Build a Claude-powered assistant that answers security questions with real CVE citations, severity scores, and patch recommendations. Add a chat interface showing which documents were retrieved. Demonstrates RAG at scale with real security data.</div>
+        <div class="project-stack">
+          <span class="tag">LangChain</span><span class="tag">ChromaDB</span><span class="tag">Claude API</span><span class="tag">NVD API</span><span class="tag">FastAPI</span><span class="tag">Docker</span>
+        </div>
+        <div class="project-impact">→ Proves: RAG + vector search + real security domain knowledge</div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-num accent-green">03</div>
+      <div>
+        <div class="project-title">AI-Powered Network Threat Detection System <span class="tag tag-new" style="font-size:9px">Y2 · PROJECT B</span></div>
+        <div class="project-desc">Train an anomaly detection model on the KDD Cup 99 or CICIDS 2017 dataset. Deploy it as a real-time API that classifies network traffic. Add an LLM layer that generates plain-English threat reports from the model's outputs. Include a dashboard showing live threat classification. Shows ML + security + deployment.</div>
+        <div class="project-stack">
+          <span class="tag">scikit-learn</span><span class="tag">pandas</span><span class="tag">FastAPI</span><span class="tag">Claude API</span><span class="tag">Plotly</span><span class="tag">Docker</span>
+        </div>
+        <div class="project-impact">→ Proves: ML security + model deployment + AI-generated reports</div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-num accent-orange">04</div>
+      <div>
+        <div class="project-title">Prompt Injection Attack & Defence Toolkit <span class="tag tag-hot" style="font-size:9px">Y3 · HIGH IMPACT</span></div>
+        <div class="project-desc">Build a tool that: (1) automatically generates and tests 50+ prompt injection variants against any LLM endpoint, (2) classifies attack success/failure, (3) suggests defence mitigations, (4) generates a structured penetration test report. Include both direct and indirect injection techniques. Publish findings — this attracts recruiter attention.</div>
+        <div class="project-stack">
+          <span class="tag">Python</span><span class="tag">Claude API</span><span class="tag">PyRIT</span><span class="tag">FastAPI</span><span class="tag">OWASP patterns</span>
+        </div>
+        <div class="project-impact">→ Proves: offensive AI security + red teaming + professional reporting</div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-num accent-orange">05</div>
+      <div>
+        <div class="project-title">Multi-Agent Security Orchestrator with Attack Surface Mapper <span class="tag tag-rare" style="font-size:9px">Y3 · CAPSTONE</span></div>
+        <div class="project-desc">Build a multi-agent system where Agent A scans a target LLM for vulnerabilities, Agent B attempts exploitation, and Agent C generates the security report. Then build the defence: sandboxing, permission controls, audit logging. Document both the attack and the defence. Submit to DEF CON AI Village. This is the project that gets you ₹15–20 LPA offers.</div>
+        <div class="project-stack">
+          <span class="tag">LangGraph</span><span class="tag">Claude API</span><span class="tag">PyRIT</span><span class="tag">MCP</span><span class="tag">FastAPI</span><span class="tag">Docker</span>
+        </div>
+        <div class="project-impact">→ Proves: agentic AI + security research + publication-worthy work</div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-num accent-purple">06</div>
+      <div>
+        <div class="project-title">AI Governance Compliance Checker for Indian Startups <span class="tag tag-new" style="font-size:9px">Y3 · GOVERNANCE PATH</span></div>
+        <div class="project-desc">Build a tool that takes a company's AI system description and generates a compliance gap analysis against DPDP Act, NIST AI RMF, and OWASP LLM Top 10. Use Claude to reason over the frameworks and produce actionable reports. Publish as open source. This attracts interest from BFSI companies and consulting firms looking for exactly this skillset.</div>
+        <div class="project-stack">
+          <span class="tag">Claude API</span><span class="tag">DPDP Act</span><span class="tag">NIST AI RMF</span><span class="tag">Streamlit</span><span class="tag">Python</span>
+        </div>
+        <div class="project-impact">→ Proves: AI governance + legal tech + the rare tech-policy hybrid skill</div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-num accent-blue">07</div>
+      <div>
+        <div class="project-title">MLOps Security Pipeline with Drift + Adversarial Input Detection <span class="tag tag-new" style="font-size:9px">POST-PLACEMENT</span></div>
+        <div class="project-desc">Production-grade ML pipeline with: model versioning (MLflow), automated retraining on drift, adversarial input detection at inference time, security scanning of model artifacts before deployment, and an alerting system for anomalous inputs. This is exactly what GCCs need and almost nobody has built.</div>
+        <div class="project-stack">
+          <span class="tag">MLflow</span><span class="tag">Docker</span><span class="tag">GitHub Actions</span><span class="tag">AWS SageMaker</span><span class="tag">Prometheus</span><span class="tag">Grafana</span>
+        </div>
+        <div class="project-impact">→ Proves: MLOps + security + production engineering = ₹35–50L skill set</div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-num accent-gold">08</div>
+      <div>
+        <div class="project-title">AI-Generated Malware Analysis & Detection Framework <span class="tag tag-hot" style="font-size:9px">POST-PLACEMENT · RESEARCH</span></div>
+        <div class="project-desc">Study and detect AI-generated polymorphic malware patterns (like the Slopoly family). Build a classifier that distinguishes AI-written code from human-written malware. Publish your methodology as a research paper on arxiv. Presents at a security conference. This is publication-worthy research that puts you in the top 0.1% of AI security professionals.</div>
+        <div class="project-stack">
+          <span class="tag">Python</span><span class="tag">ML classifiers</span><span class="tag">YARA rules</span><span class="tag">Claude API</span><span class="tag">sandbox analysis</span>
+        </div>
+        <div class="project-impact">→ Proves: frontier AI security research = ₹60L+ compensation tier</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- TECH STACK -->
+<div id="stack" class="section">
+  <div class="section-head">
+    <div class="section-num">06</div>
+    <div>
+      <div class="section-title">Complete Technology Stack</div>
+      <div class="section-desc">Every tool, library, and platform you need across the full roadmap</div>
+    </div>
+  </div>
+
+  <span class="label">AI / LLM ENGINEERING</span>
+  <div class="tech-grid" style="margin-bottom:20px">
+    <div class="tech-item"><div class="tech-dot" style="background:var(--cyan)"></div><div><div class="tech-name">Claude API</div><div class="tech-type">Primary LLM · Anthropic</div></div></div>
+    <div class="tech-item"><div class="tech-dot" style="background:var(--green)"></div><div><div class="tech-name">LangChain</div><div class="tech-type">LLM orchestration</div></div></div>
+    <div class="tech-item"><div class="tech-dot" style="background:var(--green)"></div><div><div class="tech-name">LangGraph</div><div class="tech-type">Multi-agent workflows</div></div></div>
+    <div class="tech-item"><div class="tech-dot" style="background:var(--purple)"></div><div><div class="tech-name">LlamaIndex</div><div class="tech-type">RAG framework</div></div></div>
+    <div class="tech-item"><div class="tech-dot" style="background:var(--orange)"></div><div><div class="tech-name">AutoGen</div><div class="tech-type">Multi-agent · Microsoft</div></div></div>
+    <div class="tech-item"><div class="tech-dot" style="background:var(--blue)"></div><div><div class="tech-name">CrewAI</div><div class="tech-type">Agent orchestration</div></div></div>
+    <div class="tech-item"><div class="tech-dot" style="background:var(--cyan)"></div><div><div class="tech-name">ChromaDB</div><div class="tech-type">Vector database (local)</div></div></div>
+    <div class="tech-item"><div class="tech-dot" style="background:var(--green)"></div><div><div class="tech-name">Pinecone</div><div class="tech-type">Vector database (cloud)</div></div></div>
+    <div class="tech-item"><div class="tech-dot" style="background:var(--purple)"></div><div><div class="tech-name">Hugging Face</div><div class="tech-type">Models + datasets</div></div></div>
+    <div class="tech-item"><div class="tech-dot" style="background:var(--orange)"></div><div><div class="tech-name">MCP Protocol</div><div class="tech-type">Agent tool integration</div></div></div>
+  </div>
+
+  <span class="label">AI SECURITY</span>
+  <div class="tech-grid" style="margin-bottom:20px">
+    <div class="tech-item"><div class="tech-dot" style="background:var(--red)"></div><div><div class="tech-name">Microsoft PyRIT</div><div class="tech-type">AI red teaming</div></div></div>
+    <div class="tech-item"><div class="tech-dot" style="background:var(--red)"></div><div><div class="tech-name">Garak</div><div class="tech-type">LLM vulnerability scanner</div></div></div>
+    <div class="tech-item"><div class="tech-dot" style="background:var(--orange)"></div><div><div class="tech-name">Fairlearn</div><div class="tech-type">Bias detection (Microsoft)</div></div></div>
+    <div class="tech-item"><div class="tech-dot" style="background:var(--blue)"></div><div><div class="tech-name">IBM AIF360</div><div class="tech-type">AI Fairness 360</div></div></div>
+    <div class="tech-item"><div class="tech-dot" style="background:var(--purple)"></div><div><div class="tech-name">Protect AI ModelScan</div><div class="tech-type">Model supply chain security</div></div></div>
+    <div class="tech-item"><div class="tech-dot" style="background:var(--orange)"></div><div><div class="tech-name">MITRE ATLAS</div><div class="tech-type">AI attack taxonomy</div></div></div>
+  </div>
+
+  <span class="label">CYBERSECURITY</span>
+  <div class="tech-grid" style="margin-bottom:20px">
+    <div class="tech-item"><div class="tech-dot" style="background:var(--red)"></div><div><div class="tech-name">Metasploit</div><div class="tech-type">Penetration testing</div></div></div>
+    <div class="tech-item"><div class="tech-dot" style="background:var(--orange)"></div><div><div class="tech-name">Burp Suite</div><div class="tech-type">Web app security</div></div></div>
+    <div class="tech-item"><div class="tech-dot" style="background:var(--blue)"></div><div><div class="tech-name">Wireshark</div><div class="tech-type">Network analysis</div></div></div>
+    <div class="tech-item"><div class="tech-dot" style="background:var(--green)"></div><div><div class="tech-name">Nmap</div><div class="tech-type">Network scanning</div></div></div>
+    <div class="tech-item"><div class="tech-dot" style="background:var(--purple)"></div><div><div class="tech-name">YARA</div><div class="tech-type">Malware detection rules</div></div></div>
+    <div class="tech-item"><div class="tech-dot" style="background:var(--cyan)"></div><div><div class="tech-name">Snort / Suricata</div><div class="tech-type">IDS / IPS</div></div></div>
+  </div>
+
+  <span class="label">MLOPS + INFRASTRUCTURE</span>
+  <div class="tech-grid">
+    <div class="tech-item"><div class="tech-dot" style="background:var(--blue)"></div><div><div class="tech-name">Docker</div><div class="tech-type">Containerisation</div></div></div>
+    <div class="tech-item"><div class="tech-dot" style="background:var(--green)"></div><div><div class="tech-name">MLflow</div><div class="tech-type">Experiment tracking</div></div></div>
+    <div class="tech-item"><div class="tech-dot" style="background:var(--orange)"></div><div><div class="tech-name">FastAPI</div><div class="tech-type">ML model serving</div></div></div>
+    <div class="tech-item"><div class="tech-dot" style="background:var(--cyan)"></div><div><div class="tech-name">GitHub Actions</div><div class="tech-type">CI/CD pipelines</div></div></div>
+    <div class="tech-item"><div class="tech-dot" style="background:var(--gold)"></div><div><div class="tech-name">AWS SageMaker</div><div class="tech-type">Cloud ML platform</div></div></div>
+    <div class="tech-item"><div class="tech-dot" style="background:var(--blue)"></div><div><div class="tech-name">Grafana + Prometheus</div><div class="tech-type">Monitoring + alerting</div></div></div>
+  </div>
+</div>
+
+<!-- FOREIGN MS PATH -->
+<div id="ms" class="section">
+  <div class="section-head">
+    <div class="section-num">07</div>
+    <div>
+      <div class="section-title">Foreign MS — The ₹1Cr+ Accelerator Path</div>
+      <div class="section-desc">MS in AI Security from a top university → US/UK job → ₹80L–1.5Cr. Harder but faster to the ceiling.</div>
+    </div>
+  </div>
+
+  <div class="banner" style="background:linear-gradient(135deg,rgba(168,85,247,0.08),rgba(59,130,246,0.06));border-color:rgba(168,85,247,0.2)">
+    <div class="banner-icon">🌐</div>
+    <div>
+      <div class="banner-title" style="color:var(--purple)">MS REALITY CHECK</div>
+      <div class="banner-text">MS in the US/UK/Germany costs ₹30–60 lakhs total (tuition + living). But a US job post-MS = $120K–$200K (~₹1–1.7 Cr). ROI is strong IF you get into a top program. You need: CGPA 8.5+, 2–3 strong projects, 1 research paper or open source contribution, GRE 320+, IELTS/TOEFL. <b>Start building your profile from Y1 with this target in mind.</b></div>
+    </div>
+  </div>
+
+  <div style="margin-top:16px">
+    <span class="label">USA — BEST FOR AI SECURITY</span>
+    <div class="ms-grid">
+      <div class="ms-card" style="border-color:rgba(0,212,255,0.15)">
+        <div class="ms-uni">Carnegie Mellon University</div>
+        <div class="ms-prog">MS in Information Security / ML</div>
+        <div class="ms-row"><span class="ms-key">Duration</span><span class="ms-val">16–21 months</span></div>
+        <div class="ms-row"><span class="ms-key">Tuition</span><span class="ms-val">~$50,000/yr</span></div>
+        <div class="ms-row"><span class="ms-key">GRE</span><span class="ms-val">325+ recommended</span></div>
+        <div class="ms-row"><span class="ms-key">Specialisation</span><span class="ms-val">AI + Security combined</span></div>
+        <div class="ms-salary accent-cyan">US job: $160K–$220K/yr</div>
+        <a href="https://www.cmu.edu/ini/academics/msis/index.html" target="_blank" class="skill-link" style="margin-top:8px;display:inline-flex">→ CMU INI</a>
+      </div>
+      <div class="ms-card" style="border-color:rgba(0,212,255,0.15)">
+        <div class="ms-uni">Georgia Tech</div>
+        <div class="ms-prog">MS in Cybersecurity / MS in ML</div>
+        <div class="ms-row"><span class="ms-key">Duration</span><span class="ms-val">18–24 months</span></div>
+        <div class="ms-row"><span class="ms-key">Tuition</span><span class="ms-val">~$14K total (online OMSCS)</span></div>
+        <div class="ms-row"><span class="ms-key">GRE</span><span class="ms-val">320+ recommended</span></div>
+        <div class="ms-row"><span class="ms-key">Best for</span><span class="ms-val">Affordable, strong brand</span></div>
+        <div class="ms-salary accent-cyan">US job: $140K–$190K/yr</div>
+        <a href="https://omscs.gatech.edu/" target="_blank" class="skill-link" style="margin-top:8px;display:inline-flex">→ Georgia Tech OMSCS</a>
+      </div>
+      <div class="ms-card" style="border-color:rgba(0,212,255,0.15)">
+        <div class="ms-uni">Stanford University</div>
+        <div class="ms-prog">MS in Computer Science (AI track)</div>
+        <div class="ms-row"><span class="ms-key">Duration</span><span class="ms-val">15–24 months</span></div>
+        <div class="ms-row"><span class="ms-key">Tuition</span><span class="ms-val">~$60,000/yr</span></div>
+        <div class="ms-row"><span class="ms-key">GRE</span><span class="ms-val">328+ recommended</span></div>
+        <div class="ms-row"><span class="ms-key">Best for</span><span class="ms-val">Research + top-tier network</span></div>
+        <div class="ms-salary accent-cyan">US job: $180K–$250K/yr</div>
+        <a href="https://cs.stanford.edu/academics/masters" target="_blank" class="skill-link" style="margin-top:8px;display:inline-flex">→ Stanford MS CS</a>
+      </div>
+      <div class="ms-card" style="border-color:rgba(0,212,255,0.15)">
+        <div class="ms-uni">UC San Diego</div>
+        <div class="ms-prog">MS in Computer Science (Security)</div>
+        <div class="ms-row"><span class="ms-key">Duration</span><span class="ms-val">18–24 months</span></div>
+        <div class="ms-row"><span class="ms-key">Tuition</span><span class="ms-val">~$30,000/yr</span></div>
+        <div class="ms-row"><span class="ms-key">GRE</span><span class="ms-val">318+ recommended</span></div>
+        <div class="ms-row"><span class="ms-key">Best for</span><span class="ms-val">Security research labs nearby</span></div>
+        <div class="ms-salary accent-cyan">US job: $130K–$180K/yr</div>
+        <a href="https://cse.ucsd.edu/graduate/degree-programs/ms-program" target="_blank" class="skill-link" style="margin-top:8px;display:inline-flex">→ UCSD MS</a>
+      </div>
+    </div>
+
+    <span class="label" style="margin-top:20px">UK & EUROPE — LOWER COST, STRONG RESEARCH</span>
+    <div class="ms-grid">
+      <div class="ms-card" style="border-color:rgba(0,255,136,0.12)">
+        <div class="ms-uni">University of Edinburgh</div>
+        <div class="ms-prog">MSc Artificial Intelligence</div>
+        <div class="ms-row"><span class="ms-key">Duration</span><span class="ms-val">12 months</span></div>
+        <div class="ms-row"><span class="ms-key">Tuition</span><span class="ms-val">~£30,000</span></div>
+        <div class="ms-row"><span class="ms-key">IELTS</span><span class="ms-val">6.5+</span></div>
+        <div class="ms-row"><span class="ms-key">Best for</span><span class="ms-val">AI research, fast (1 yr)</span></div>
+        <div class="ms-salary accent-green">UK job: £60K–£90K/yr</div>
+        <a href="https://www.ed.ac.uk/studying/postgraduate/degrees/index.php?r=site/view&id=107" target="_blank" class="skill-link" style="margin-top:8px;display:inline-flex">→ Edinburgh MSc AI</a>
+      </div>
+      <div class="ms-card" style="border-color:rgba(0,255,136,0.12)">
+        <div class="ms-uni">Imperial College London</div>
+        <div class="ms-prog">MSc Computing (AI & ML) / Security</div>
+        <div class="ms-row"><span class="ms-key">Duration</span><span class="ms-val">12 months</span></div>
+        <div class="ms-row"><span class="ms-key">Tuition</span><span class="ms-val">~£36,000</span></div>
+        <div class="ms-row"><span class="ms-key">IELTS</span><span class="ms-val">7.0+</span></div>
+        <div class="ms-row"><span class="ms-key">Best for</span><span class="ms-val">Top-tier brand + London network</span></div>
+        <div class="ms-salary accent-green">UK job: £70K–£110K/yr</div>
+        <a href="https://www.imperial.ac.uk/computing/prospective-students/pg/" target="_blank" class="skill-link" style="margin-top:8px;display:inline-flex">→ Imperial PG</a>
+      </div>
+      <div class="ms-card" style="border-color:rgba(0,255,136,0.12)">
+        <div class="ms-uni">TU Munich (Germany)</div>
+        <div class="ms-prog">MSc Informatics / Data Engineering</div>
+        <div class="ms-row"><span class="ms-key">Duration</span><span class="ms-val">24 months</span></div>
+        <div class="ms-row"><span class="ms-key">Tuition</span><span class="ms-val">~€1,500/yr (nearly free!)</span></div>
+        <div class="ms-row"><span class="ms-key">Language</span><span class="ms-val">English programs available</span></div>
+        <div class="ms-row"><span class="ms-key">Best for</span><span class="ms-val">Best value globally for tech MS</span></div>
+        <div class="ms-salary accent-green">EU/Germany job: €70K–€110K/yr</div>
+        <a href="https://www.tum.de/en/studies/degree-programs/detail/informatics-master-of-science-msc" target="_blank" class="skill-link" style="margin-top:8px;display:inline-flex">→ TU Munich Informatics</a>
+      </div>
+      <div class="ms-card" style="border-color:rgba(0,255,136,0.12)">
+        <div class="ms-uni">ETH Zurich (Switzerland)</div>
+        <div class="ms-prog">MSc Computer Science</div>
+        <div class="ms-row"><span class="ms-key">Duration</span><span class="ms-val">18–24 months</span></div>
+        <div class="ms-row"><span class="ms-key">Tuition</span><span class="ms-val">~CHF 730/semester</span></div>
+        <div class="ms-row"><span class="ms-key">Admission</span><span class="ms-val">Extremely competitive (CGPA 9+)</span></div>
+        <div class="ms-row"><span class="ms-key">Best for</span><span class="ms-val">Top 3 CS program globally</span></div>
+        <div class="ms-salary accent-green">Switzerland job: CHF 110K–160K/yr</div>
+        <a href="https://inf.ethz.ch/studies/master/master-cs.html" target="_blank" class="skill-link" style="margin-top:8px;display:inline-flex">→ ETH Zurich CS</a>
+      </div>
+    </div>
+
+    <div style="margin-top:16px;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px 16px">
+      <div style="font-family:'Syne',sans-serif;font-size:14px;font-weight:600;margin-bottom:10px">📋 What your Y1–Y3 profile must look like for MS admission</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px">
+        <div class="skill-block"><div class="skill-block-title">Academic</div><ul class="skill-block-items"><li>CGPA 8.5+ (9+ for ETH/Stanford)</li><li>GRE 320+ (for US programs)</li><li>IELTS 7.0+ / TOEFL 105+</li><li>No active backlogs</li></ul></div>
+        <div class="skill-block"><div class="skill-block-title">Research</div><ul class="skill-block-items"><li>1 published paper or preprint (arxiv)</li><li>Research internship / lab project</li><li>Letter of recommendation from professor</li><li>Statement of purpose (strong narrative)</li></ul></div>
+        <div class="skill-block"><div class="skill-block-title">Projects</div><ul class="skill-block-items"><li>3+ live GitHub projects with stars</li><li>1 competition result (HackAPrompt, Kaggle)</li><li>Open source contribution merged</li><li>Deployed products, not just notebooks</li></ul></div>
+        <div class="skill-block"><div class="skill-block-title">Profile</div><ul class="skill-block-items"><li>Active LinkedIn with project writeups</li><li>Medium/blog articles on AI security</li><li>TryHackMe / CTF ranked profile</li><li>GitHub green contribution graph</li></ul></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- COMPANIES -->
+<div id="companies" class="section">
+  <div class="section-head">
+    <div class="section-num">08</div>
+    <div>
+      <div class="section-title">Companies That Pay ₹60 LPA to AI Engineers in India</div>
+      <div class="section-desc">These are your targets. Each requires a different approach — know which ones you're aiming for.</div>
+    </div>
+  </div>
+  <div class="companies">
+    <div class="company-card">
+      <div class="company-name">Google India</div>
+      <div class="company-type">PRODUCT / FAANG</div>
+      <div class="company-pay accent-cyan">₹46–80 LPA</div>
+      <div style="font-size:10px;color:var(--text3);margin-top:4px">Requires: DSA excellence + AI specialisation. Hard DSA filter. Bangalore GCC.</div>
+    </div>
+    <div class="company-card">
+      <div class="company-name">Amazon India</div>
+      <div class="company-type">PRODUCT / FAANG</div>
+      <div class="company-pay accent-orange">₹26–60 LPA</div>
+      <div style="font-size:10px;color:var(--text3);margin-top:4px">AWS AI + security roles. Bar raiser interview. Strong LeetCode required.</div>
+    </div>
+    <div class="company-card">
+      <div class="company-name">Goldman Sachs Tech</div>
+      <div class="company-type">GCC · BFSI</div>
+      <div class="company-pay accent-purple">₹35–65 LPA</div>
+      <div style="font-size:10px;color:var(--text3);margin-top:4px">AI + governance combo ideal. Bangalore. NIST RMF knowledge valued.</div>
+    </div>
+    <div class="company-card">
+      <div class="company-name">JP Morgan Tech</div>
+      <div class="company-type">GCC · BFSI</div>
+      <div class="company-pay accent-purple">₹35–65 LPA</div>
+      <div style="font-size:10px;color:var(--text3);margin-top:4px">AI security + compliance hybrid. Mumbai + Bangalore. DPDP knowledge a plus.</div>
+    </div>
+    <div class="company-card">
+      <div class="company-name">Walmart Global Tech</div>
+      <div class="company-type">GCC · RETAIL TECH</div>
+      <div class="company-pay accent-green">₹35–60 LPA</div>
+      <div style="font-size:10px;color:var(--text3);margin-top:4px">MLOps + security roles. Strong cloud (AWS/GCP) required. Bangalore.</div>
+    </div>
+    <div class="company-card">
+      <div class="company-name">Microsoft India</div>
+      <div class="company-type">PRODUCT</div>
+      <div class="company-pay accent-blue">₹30–70 LPA</div>
+      <div style="font-size:10px;color:var(--text3);margin-top:4px">Azure AI + security. PyRIT contributors get noticed. Hyderabad + Bangalore.</div>
+    </div>
+    <div class="company-card">
+      <div class="company-name">Anthropic</div>
+      <div class="company-type">AI SAFETY · REMOTE</div>
+      <div class="company-pay accent-cyan">$150K–$300K</div>
+      <div style="font-size:10px;color:var(--text3);margin-top:4px">AI safety researcher. Publication required. Remote-first. Elite of elite.</div>
+    </div>
+    <div class="company-card">
+      <div class="company-name">Toptal / Turing</div>
+      <div class="company-type">REMOTE US FIRMS</div>
+      <div class="company-pay accent-gold">₹60–100 LPA equiv.</div>
+      <div style="font-size:10px;color:var(--text3);margin-top:4px">Senior AI engineers working for US clients. 3–4 yrs experience required. Strong English communication.</div>
+    </div>
+    <div class="company-card">
+      <div class="company-name">Deloitte / PwC / EY</div>
+      <div class="company-type">BIG 4 CONSULTING</div>
+      <div class="company-pay accent-orange">₹25–50 LPA</div>
+      <div style="font-size:10px;color:var(--text3);margin-top:4px">AI governance + security consulting. ISO 42001 + AIGP valued. Fast promotions.</div>
+    </div>
+    <div class="company-card">
+      <div class="company-name">Zepto / Meesho / Razorpay</div>
+      <div class="company-type">INDIAN PRODUCT CO.</div>
+      <div class="company-pay accent-green">₹20–45 LPA</div>
+      <div style="font-size:10px;color:var(--text3);margin-top:4px">Best first job targets. Fast growth, good pay, real AI problems. Your Year 0 target.</div>
+    </div>
+  </div>
+</div>
+
+<!-- CHECKLIST -->
+<div id="checklist" class="section">
+  <div class="section-head">
+    <div class="section-num">09</div>
+    <div>
+      <div class="section-title">The ₹60 LPA Non-Negotiable Checklist</div>
+      <div class="section-desc">If you can tick every box here, you are placement-ready and trajectory-locked. Be brutally honest.</div>
+    </div>
+  </div>
+  <div class="checklist">
+    <div class="check-item"><div class="check-box">□</div><div class="check-text"><b>DSA:</b> Solving LeetCode Medium in under 20 minutes. 200+ problems solved. Started from Y1, not Y3.</div></div>
+    <div class="check-item"><div class="check-box">□</div><div class="check-text"><b>Python mastery:</b> Can build a production-grade FastAPI app with auth, async, testing, and Docker from scratch.</div></div>
+    <div class="check-item"><div class="check-box">□</div><div class="check-text"><b>LLM engineering:</b> Built and deployed a RAG pipeline with real data, vector search, and streaming — not just a tutorial.</div></div>
+    <div class="check-item"><div class="check-box">□</div><div class="check-text"><b>Agentic AI:</b> Built a multi-agent system with tool calling, planning, and persistent memory using LangGraph or AutoGen.</div></div>
+    <div class="check-item"><div class="check-box">□</div><div class="check-text"><b>AI security:</b> Can explain and demonstrate prompt injection, model extraction, and agentic privilege escalation — with code.</div></div>
+    <div class="check-item"><div class="check-box">□</div><div class="check-text"><b>Red teaming:</b> Used PyRIT to run an automated red team assessment. Have written a professional pentest report.</div></div>
+    <div class="check-item"><div class="check-box">□</div><div class="check-text"><b>MITRE ATLAS:</b> Can map a real AI attack to the ATLAS taxonomy and explain the technique in an interview.</div></div>
+    <div class="check-item"><div class="check-box">□</div><div class="check-text"><b>Governance:</b> Can explain NIST AI RMF's 4 functions, how DPDP Act applies to an AI product, and what ISO 42001 requires.</div></div>
+    <div class="check-item"><div class="check-box">□</div><div class="check-text"><b>Certifications:</b> ISC2 CC + CompTIA SecAI+ + IAPP AIGP (or in progress) + AWS ML Specialty/Azure AI-102.</div></div>
+    <div class="check-item"><div class="check-box">□</div><div class="check-text"><b>GitHub:</b> 4+ projects with live demo URLs, clean READMEs, architecture diagrams, and months of consistent commits.</div></div>
+    <div class="check-item"><div class="check-box">□</div><div class="check-text"><b>Open source:</b> At least 1 merged PR in a recognised repo (LangChain, Hugging Face, OWASP, PyRIT, or similar).</div></div>
+    <div class="check-item"><div class="check-box">□</div><div class="check-text"><b>Public research:</b> Written and published at least 2 technical articles on LinkedIn or Medium about AI security findings.</div></div>
+    <div class="check-item"><div class="check-box">□</div><div class="check-text"><b>Competition:</b> Participated in HackAPrompt, a CTF, Kaggle, or DEF CON AI Village — with a result to show.</div></div>
+    <div class="check-item"><div class="check-box">□</div><div class="check-text"><b>Internship:</b> At least 1 internship at a product company, GCC, or AI startup before final year placement.</div></div>
+    <div class="check-item"><div class="check-box">□</div><div class="check-text"><b>CGPA (MS track):</b> Maintaining 8.5+ with no backlogs. Research paper or lab project in progress by Y3.</div></div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="divider"></div>
+<div style="text-align:center;padding:20px 0 40px">
+  <div style="font-family:'Syne',sans-serif;font-size:22px;font-weight:800;margin-bottom:8px">
+    <span style="background:linear-gradient(135deg,var(--cyan),var(--green));-webkit-background-clip:text;-webkit-text-fill-color:transparent">Start today.</span>
+  </div>
+  <div style="font-size:13px;color:var(--text3);max-width:500px;margin:0 auto;line-height:1.7">
+    The people earning ₹60 LPA in 5 years started their GitHub streak and first LeetCode problem in Year 1 — not after placement panic. Every day you delay is a day someone else becomes the rare specialist that companies compete for.
+  </div>
+  <div style="margin-top:20px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap">
+    <a href="https://github.com" target="_blank" style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--cyan);border:1px solid rgba(0,212,255,0.2);padding:6px 16px;border-radius:4px;text-decoration:none;background:rgba(0,212,255,0.04)">→ Start GitHub streak</a>
+    <a href="https://leetcode.com" target="_blank" style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--green);border:1px solid rgba(0,255,136,0.2);padding:6px 16px;border-radius:4px;text-decoration:none;background:rgba(0,255,136,0.04)">→ Start LeetCode</a>
+    <a href="https://tryhackme.com" target="_blank" style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--orange);border:1px solid rgba(255,107,53,0.2);padding:6px 16px;border-radius:4px;text-decoration:none;background:rgba(255,107,53,0.04)">→ Start TryHackMe</a>
+    <a href="https://docs.anthropic.com" target="_blank" style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--purple);border:1px solid rgba(168,85,247,0.2);padding:6px 16px;border-radius:4px;text-decoration:none;background:rgba(168,85,247,0.04)">→ Anthropic Docs</a>
+  </div>
+</div>
+
+</div>
+</body>
+</html>
